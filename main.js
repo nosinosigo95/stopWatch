@@ -19,7 +19,7 @@ $(document).ready(function () {
         diff -= minutes * 1000 * 60;
         seconds = Math.trunc(diff / 1000);
         diff -= seconds * 1000;
-        mseconds = diff;
+        mseconds = Math.trunc(diff / 100);
 
         $(".times").text(hours + ":" + minutes + ":" + seconds + ":" + mseconds);
     }
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         start = Date.now();
 
-        timerId = setInterval(calculateTimes, 1000);
+        timerId = setInterval(calculateTimes, 100);
     });
 
     $(".stop").click(function () {
