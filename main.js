@@ -1,10 +1,7 @@
-
-
 $(document).ready(function () {
     let start, temp_times = 0;
     let timerId;
     let pushButton = "reset";
-
 
     function calculateTimes() {
         let times;
@@ -65,6 +62,4 @@ $(document).ready(function () {
         clearInterval(timerId);
         $(".times").text("0:0:0:0");
     });
-
-
 });
